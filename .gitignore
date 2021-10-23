@@ -1,0 +1,11 @@
+# ignore latex generated files
+*.toc
+*.out
+*.aux
+*.log
+*.gz
+*.fls
+*.fdb_latexmk
+
+# proteus files
+# ...
