@@ -1,0 +1,129 @@
+\documentclass[12pt,onecolumn,a4paper,fleqn]{article}
+\usepackage[top=1in, bottom=1in, left=0.75in, right=0.75in]{geometry}
+\usepackage{epsfig,graphicx,subfigure,amsthm,amsmath}
+\usepackage[table,xcdraw,svgnames]{xcolor}
+\usepackage{setspace}
+\usepackage{mathtools}
+\usepackage{fancyhdr}
+\usepackage{sidecap}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{decorations.pathreplacing}
+\usepackage{relsize}
+\usepackage{color,xcolor}
+\usepackage[framed,numbered]{matlab-prettifier}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{datetime}
+\usepackage{xepersian}
+
+
+\settextfont[Path=fonts/,BoldFont={ZarBd.ttf},BoldFeatures={Scale=0.9}]{BZar.ttf}
+
+%\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+%\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+%\definecolor{vgreen}{RGB}{104,180,104}
+%\definecolor{vblue}{RGB}{49,49,255}
+%\definecolor{vorange}{RGB}{255,143,102}
+
+
+% title page template
+\newcommand{\heading}[2]
+{
+	\begin{center}
+		\begin{huge}
+			\textbf{
+				به نام خدا\\
+			}
+		\end{huge}
+		
+		\vspace*{1.5cm}
+		\includegraphics[scale=0.9]{source/sharif_logo.png}\\
+		\vspace*{0.5cm}
+		\begin{Large}
+			\textbf{
+				دانشگاه صنعتی شریف\\
+				\vspace*{0.25cm}
+				دانشکده مهندسی کامپیوتر\\
+			}
+		\end{Large}
+		\vspace*{3cm}
+		\begin{huge}
+			\textbf{
+				آزمایشگاه معماری کامپیوتر\\
+				\vspace*{0.75cm}
+			}
+		\end{huge}
+		
+		\begin{Large}
+			\textbf{
+				#1:\\
+				#2\\
+			}
+		\end{Large}
+		
+		\noindent\rule[1ex]{\linewidth}{1pt}\\
+		\vspace*{0.5cm}
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\multicolumn{2}{|c|}{\textbf{اطلاعات تیم}}
+				\\ \hline
+				\textbf{نام اعضا} & \textbf{شماره دانشجویی}
+				\\ \hline
+				متین داغیانی & 98106456
+				\\ \hline
+				بردیا محمدی & 98171104
+				\\ \hline
+				محمدجواد هزاره & 98101074
+				\\ \hline 
+			\end{tabular}
+		\end{table}
+		\begin{Large}				
+			\vspace*{0.75cm}
+			\textbf{
+				پاییز 1400
+			}
+		\end{Large}			
+	\end{center}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\textbf{آزمایشگاه معماری کامپیوتر}}
+%%--------------------[should change]---------------------
+\chead{\textbf{گزارش آزمایش اول}}
+%%--------------------[should change]---------------------
+\lhead{\textbf{\nouppercase{\rightmark}}}
+\cfoot{({\thepage})}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+%\newdateformat{monthyeardate}{%
+%	\monthname[\THEMONTH], \THEYEAR}
+
+\onehalfspacing
+\begin{document}
+	%%% title pages
+	\large
+	\begin{titlepage}
+		\heading{آزمایش دوم}{ضرب‌کننده ممیز ثابت}
+		\thispagestyle{empty}
+	\end{titlepage}	
+	\pagebreak
+	
+	%%% contents page
+	\tableofcontents
+	\thispagestyle{empty}
+	\pagebreak
+	
+	%%% main document
+	\section{هدف آزمایش}
+	\section{مراحل طراحی و پیاده‌سازی مدار}
+	\section{تست مدار}
+\end{document}
