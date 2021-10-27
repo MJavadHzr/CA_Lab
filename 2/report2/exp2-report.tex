@@ -141,18 +141,17 @@
 	\section{مراحل طراحی و پیاده‌سازی مدار}
 	همانطور که در بخش قبل گفته شد، مدار مورد نظر از سه ماژول اصلی شیفت‌دهنده به سمت راست، شیفت‌دهنده به سمت چپ و جمع‌کننده هشت‌بیتی تشکیل شده است. هم‌چنین ماژول \lr{REG} ماژول کمکی بوده و برای جلوگیری از شلوغ شدن نمای اصلی مدار اضافه شده است. در ادامه به بررسی طراحی هر یک از این ماژول‌ها می‌پردازیم:
 	\subsection{ماژول شیفت‌دهنده به سمت راست}
-	\begin{wrapfigure}{l}{0.18\textwidth}
-		\centering
-		\includegraphics[width=0.17\textwidth]{source/rshiftreg.png}
-		\caption{ورودی‌ها و خروجی‌های ماژول شیفت‌دهنده به سمت راست}
-		\label{fig:rshiftreg}
-	\end{wrapfigure}
 همانطور که گفته شد این مدار برای شیفت دادن ضرب‌کننده در هر مرحله مورد استفاده قرار می‌گیرد. ورودی‌ها و خروجی‌های آن را در شکل \ref{fig:rshiftreg} می‌توان دید.
-
-	طراحی داخلی این ماژول نیز به کمک فلیپ‌فلاپ‌های نوع \lr{D} صورت گرفته که خروجی هر یک به صورت سریال به فلیپ‌فلاپ بعدی داده شده تا عملیات شیفت با آمدن کلاک صورت بگیرد. طراحی داخلی این ماژول را در شکل \ref{fig:rshift_inner} می‌توان مشاهده کرد.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/rshift_inner.png}
+		\includegraphics[width=0.35\textwidth]{source/rshiftreg.png}
+		\caption{ورودی‌ها و خروجی‌های ماژول شیفت‌دهنده به سمت راست}
+		\label{fig:rshiftreg}
+	\end{figure}
+	طراحی داخلی این ماژول نیز به کمک فلیپ‌فلاپ‌های نوع \lr{D} صورت گرفته که خروجی هر یک به فلیپ‌فلاپ قبلی داده شده تا عملیات شیفت به راست با آمدن کلاک صورت بگیرد. هم‌چنین سیگنال \lr{start} به ورودی \lr{LOAD} ماژول داده شده تا در صورت یک شدن این سیگنال، رجیسترها ری‌ست شوند و مقدار صفر در آن‌ها قرار بگیرد. داده‌ی ورودی نیز با استفاده از ترای‌استیت بافر به ورودی رجیسترها متصل شده تا در صورت یک بودن سیگنال \lr{LOAD}، مقدار ورودی در خروجی ظاهر شود یا به عبارتی داده‌ی ورودی در رجیسترها بارگذاری شود. طراحی داخلی این ماژول را در شکل \ref{fig:rshift_inner} می‌توان مشاهده کرد.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\textwidth]{source/rshift_inner.png}
 		\caption{طراحی داخلی ماژول شیفت‌دهنده به سمت راست}
 		\label{fig:rshift_inner}
 	\end{figure}
@@ -161,7 +160,7 @@
 	همانطور که در الگوریتم \lr{Add \& Shift} توضیح داده شد، از بیت اول مقدار شیفت داده شده‌ی ضرب‌کننده برای این منظور که ضرب‌شونده را به حاصل اضافه کنیم یا خیر استفاده می‌شود، بنابراین بیت اول خروجی این ماژول را با بیت‌های ضرب‌شونده \lr{And} می‌کنیم تا خواسته‌ی ما برآورده شود.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/decidetoadd.png}
+		\includegraphics[width=0.4\textwidth]{source/decidetoadd.png}
 		\caption{تصمیم‌گیری برای اضافه کردن ضرب‌شونده}
 		\label{fig:decidetoadd}
 	\end{figure}
@@ -169,14 +168,14 @@
 	از این ماژول برای شیفت دادن ضرب‌شونده به سمت چپ استفاده می‌شود. رابط این ماژول را در شکل \ref{fig:lshiftreg} می‌توان دید.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/lshiftreg.png}
+		\includegraphics[width=0.35\textwidth]{source/lshiftreg.png}
 		\caption{ماژول شیفت‌دهنده به سمت چپ}
 		\label{fig:lshiftreg}
 	\end{figure}
-در طراحی داخلی این مدار نیز از فلیپ‌فلاپ‌های نوع \lr{D} استفاده شده که مشابه ماژول قبلی خروجی هر فلیپ‌فلاپ به ورودی فلیپ‌فلاپ قبلی متصل شده تا عملیت شیفت به چپ صورت بگیرد. طراحی داخلی این ماژول را نیز می‌توان در شکل \ref{fig:lshiftreg_inner} مشاهده کرد.
+در طراحی داخلی این مدار نیز از فلیپ‌فلاپ‌های نوع \lr{D} استفاده شده که مشابه ماژول قبلی خروجی هر فلیپ‌فلاپ به ورودی فلیپ‌فلاپ بعدی متصل شده تا عملیت شیفت به چپ صورت بگیرد. به طور مشابه سیگنال \lr{start} به ورودی \lr{LOAD} مدار متصل خواهد شد. با یک شدن این سیگنال مقدار ورودی در خروجی بارگذاری می‌شود. طراحی داخلی این ماژول را نیز می‌توان در شکل \ref{fig:lshiftreg_inner} مشاهده کرد.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/lshiftreg_inner.png}
+		\includegraphics[width=0.7\textwidth]{source/lshiftreg_inner.png}
 		\caption{طراحی داخلی ماژول شیفت‌دهنده به سمت چپ}
 		\label{fig:lshiftreg_inner}
 	\end{figure}
@@ -193,20 +192,20 @@
 	این ماژول وظیفه جمع کردن مقدار حاصل تا این لحظه، با ضرب‌شونده را داراست. در واقع مقدار ضرب‌شونده در سیگال‌های $a_i$ به این ماژول می‌رسد که این سیگنال‌ها همان  \lr{and} شده‌ی بیت‌های ضرب‌شونده با بیت اول ضرب‌کننده هستند. رابط این ماژول در شکل آمده است.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/adder.png}
+		\includegraphics[width=0.45\textwidth]{source/adder.png}
 		\caption{ماژول جمع‌کننده}
 		\label{fig:adder}
 	\end{figure}
 
 	طراحی داخلی این جمع‌کننده نیز با استفاده از هشت \lr{Full Adder} صورت گرفته که طراحی داخلی این ماژول و ماژول \lr{Full Adder} را در شکل \ref{fig:adder_inner} می‌توان دید.
 	\begin{figure}[H]
-		\begin{subfigure}{0.5\textwidth}
+		\begin{subfigure}{0.6\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{source/adder_inner.png}
 			\caption{طراحی داخلی ماژول جمع‌کننده}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}{0.4\textwidth}
+		\begin{subfigure}{0.35\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{source/fulladder_inner.png}
 			\caption{طراحی داخلی ماژول \lr{Full Adder}}
@@ -218,14 +217,14 @@
 	همانطور که گفته شد این ماژول به عنوان رجیستر برای نگه‌داری مقدار حاصل ضرب در هر مرحله استفاده می‌شود. خروجی‌های این ماژول به ماژول جمع‌کننده داده شده تا مقدار حاصل ضرب آپدیت شود. ورودی‌ و خروجی‌های این ماژول در شکل \ref{fig:register} آورده شده است.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.4\textwidth]{source/register.png}
+		\includegraphics[width=0.35\textwidth]{source/register.png}
 		\caption{ماژول \lr{REG}}
 		\label{fig:register}
 	\end{figure}
 	در مدار داخلی آن نیز از هشت فلیپ‌فلاپ نوع \lr{D} استفاده شده است که طراحی آن را در شکل \ref{fig:register_inner} می‌توان دید.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.5\textwidth]{source/register_inner.png}
+		\includegraphics[width=0.7\textwidth]{source/register_inner.png}
 		\caption{طراحی داخلی ماژول \lr{REG}}
 		\label{fig:register_inner}
 	\end{figure}
@@ -234,16 +233,22 @@
 	برای تست کارکرد مدار نیز چند نمونه ورودی داده شده و حاصل‌ضرب آن‌ها توسط مدار محاسبه شده است. نمونه‌ای از تست‌ها را در شکل‌های زیر می‌توان دید.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.8\textwidth]{source/test1.png}
+		\includegraphics[width=0.65\textwidth]{source/test1.png}
 		\caption{$7 \times 5 = 35$}
-		\vspace*{5mm}
-		\includegraphics[width=0.8\textwidth]{source/test2.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\textwidth]{source/test2.png}
 		\caption{$15 \times 15 = 225$}
-		\vspace*{5mm}
-		\includegraphics[width=0.8\textwidth]{source/test3.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\textwidth]{source/test3.png}
 		\caption{$7\times 0 = 0$}
-		\vspace*{5mm}
-		\includegraphics[width=0.8\textwidth]{source/test4.png}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.65\textwidth]{source/test4.png}
 		\caption{$15 \times 1 = 15$}
 	\end{figure}
 \end{document}
