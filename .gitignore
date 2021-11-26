@@ -6,6 +6,8 @@
 *.gz
 *.fls
 *.fdb_latexmk
-
+*.zip
+*/Project Backups/*
+*.workspace
 # proteus files
 # ...
