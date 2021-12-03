@@ -1,0 +1,20 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces بلوک دیاگرام سیسیتم}}{3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces نمای کلی سیستم پیاده سازی شده}}{4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces ماژول شمارنده 5 بیتی}}{4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces نمای داخلی ماژول شمارنده 5 بیتی}}{5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces ماژول حافظه دستورات}}{6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces محتوای فایل \lr {memory.bin}}}{7}%
+\contentsline {figure}{\numberline {7}{\ignorespaces به روز رسانی تنظیمات تراشه 2732}}{8}%
+\contentsline {figure}{\numberline {8}{\ignorespaces سری فیبوناچی}}{8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces برنامه محاسبه سری فیبوناچی}}{9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces وضعیت مدار در هنگام شروع}}{9}%
+\contentsline {figure}{\numberline {11}{\ignorespaces \lr {Clear R0}}}{10}%
+\contentsline {figure}{\numberline {12}{\ignorespaces $R1 \leftarrow 1$}}{10}%
+\contentsline {figure}{\numberline {13}{\ignorespaces $R0 \leftarrow 1$}}{11}%
+\contentsline {figure}{\numberline {14}{\ignorespaces $R1 \leftarrow 2$}}{11}%
+\contentsline {figure}{\numberline {15}{\ignorespaces $R0 \leftarrow 3$}}{12}%
+\contentsline {figure}{\numberline {16}{\ignorespaces $R1 \leftarrow 5$}}{12}%
+\contentsline {figure}{\numberline {17}{\ignorespaces $R0 \leftarrow 8$}}{13}%
+\contentsline {figure}{\numberline {18}{\ignorespaces $R1 \leftarrow 13$}}{13}%
+\contentsline {figure}{\numberline {19}{\ignorespaces $R0 \leftarrow 21$}}{14}%
+\contentsline {figure}{\numberline {20}{\ignorespaces $R1 \leftarrow 34$}}{14}%
