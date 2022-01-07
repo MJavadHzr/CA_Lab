@@ -1,0 +1,59 @@
+#########################
+#   R0: counter		    #
+#   R1: second number	#
+#   R2: sum		        #
+#   R3: first number	#
+#########################
+
+//clear R0
+SUB	R0	R0
+
+//initialization
+ADD	R0	+1
+ADD	R3	0
+ADD	R1	0
+ADD	R2	R0
+
+//counter to 8
+ADD	R0	R0
+ADD	R0	R0
+ADD	R0	R0
+
+//for loop
+
+//swap r0 and r3
+ADD	R0	R3
+SUB	R3	R3
+SUB	R0	R3
+
+//next num in r0
+ADD	R0	R1
+ADD	R2	R2
+
+//swap r0 and r1
+ADD	R0	R1
+SUB	R1	R1
+SUB	R0	R1
+
+//swap r0 and r3
+ADD	R0	R3
+SUB	R3	R3
+SUB	R0	R3
+
+//counter--
+SUB	R0	-1
+
+JZ	10110
+J	01000
+
+//load in mem_data
+SUB	R0	R0
+ADD	R0	R2
+STO	00000
+
+//test storing in memory
+SUB R0  R0
+LOD 00000
+
+//jump to here
+J   11001
