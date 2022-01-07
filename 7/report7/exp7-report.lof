@@ -7,8 +7,8 @@
 \contentsline {figure}{\numberline {7}{\ignorespaces ماژول \lr {ALU}}}{7}{figure.7}%
 \contentsline {figure}{\numberline {8}{\ignorespaces تغییرات طراحی داخلی \lr {ALU}}}{7}{figure.8}%
 \contentsline {figure}{\numberline {9}{\ignorespaces طراحی مدار برای \lr {SR}}}{8}{figure.9}%
-\contentsline {figure}{\numberline {10}{\ignorespaces ماژول \lr {DATA\_MEM}}}{8}{figure.10}%
+\contentsline {figure}{\numberline {10}{\ignorespaces ماژول \lr {DATA\_MEM}}}{9}{figure.10}%
 \contentsline {figure}{\numberline {11}{\ignorespaces طراحی داخلی ماژول \lr {DATA\_MEM}}}{9}{figure.11}%
-\contentsline {figure}{\numberline {12}{\ignorespaces ماژول \lr {CU}}}{9}{figure.12}%
+\contentsline {figure}{\numberline {12}{\ignorespaces ماژول \lr {CU}}}{10}{figure.12}%
 \contentsline {figure}{\numberline {13}{\ignorespaces طراحی داخلی ماژول \lr {CU}}}{10}{figure.13}%
 \contentsline {figure}{\numberline {14}{\ignorespaces وضعیت مدار پس از اجرای کامل برنامه‌ی \lr {fibo\_machine.bin}}}{11}{figure.14}%
