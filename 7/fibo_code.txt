@@ -46,14 +46,14 @@ SUB	R0	-1
 JZ	10110
 J	01000
 
-//load in mem_data
+//store in mem_data
 SUB	R0	R0
 ADD	R0	R2
 STO	00000
 
-//test storing in memory
+//test loading from memory in memory
 SUB R0  R0
 LOD 00000
 
 //jump to here
-J   11001
+J   11011
