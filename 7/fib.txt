@@ -1,0 +1,41 @@
+ADD     R0, 1   # R0 = R0 + 1
+STORE   R0, MEM[ 0 ]    # MEM[ 0 ] = R0
+
+START:
+LOAD    R0, MEM[ 11 ]   # R0 = MEM[ 11 ] = 9
+ADD     R0, -1  # R0 = R0 - 1 
+JUMPZ   R0, END # IF R0 == 0, THEN JUMP TO END
+STORE   R0, MEM[ 11 ]   # MEM[ 11 ] = R0
+LOAD    R0, MEM[ 0 ]    # R0 = MEM[ 0 ]
+ADD     R1, R1  # R1 = R1 + R0
+ADD     R0, R1  # R0 = R0 + R1
+STORE   R0, MEM[ 0 ] # MEM[ 0 ] = R0
+JUMP    START   # JUMP TO START ( UNCONDITIONAL )
+
+END:
+LOAD    R0, MEM[ 0 ]    # R0 = MEM[ 0 ]
+SUB     R0, 1   # R0 = R0 - 1
+ADD     R0, R1
+STORE   R0, MEM[ 0 ]    # MEM[ 0 ] = R0
+LAST:
+JUMP    LAST    # HALTING THE PROGRAM
+
+####################
+
+# ADDING FIRST 8BITS OF TWO NUMBERS
+LOAD    R0, MEM[ 0 ]    
+ADD     R1, 0
+LOAD    R0, MEM[ 2 ]
+ADD     R0, R1
+STORE   R0, MEM[ 4 ]
+
+# ADDING SECOND 8BITS OF TWO NUMBERS
+LOAD    R0, MEM[ 1 ]
+ADD     R0, CARRY   # ADDING WITH CARRY BIT
+ADD     R1, 0
+LOAD    R0, MEM[ 3 ]
+ADD     R0, R1
+STORE   R0, MEMD[ 5 ]
+
+END:
+JUMP    END     # HALTING THE PROGRAM
