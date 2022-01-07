@@ -1,0 +1,103 @@
+SUB R0  R0
+ADD R1  0
+
+//------------1st 8 bit---------------
+LOD 00000
+ADD R1  R1
+LOD 01000
+ADD R0 R1
+STO 10000
+
+JO  ?????
+J   ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------2nd 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------3rd 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------4th 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------5th 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------6th 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------7th 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+JO ?????
+J  ?????
+
+SUB R0  R0
+ADD R1  +1
+
+//------------8th 8 bit---------------
+LOD 00001
+ADD R1  R1
+LOD 01001
+ADD R0  R1
+STO 10001
+
+//-----------------
+J   ?????
