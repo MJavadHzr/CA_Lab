@@ -1,0 +1,14 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces بلوک دیاگرام سیسیتم}}{3}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces نمای کلی سیستم پیاده سازی شده}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces ماژول \lr {PC}}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces طراحی داخلی ماژول \lr {PC}}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces ماژول \lr {INST\_MEM} به همراه \lr {IR}}}{6}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces طراحی داخلی ماژول \lr {IR}}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces ماژول \lr {ALU}}}{7}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces تغییرات طراحی داخلی \lr {ALU}}}{7}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces طراحی مدار برای \lr {SR}}}{8}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces ماژول \lr {DATA\_MEM}}}{8}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces طراحی داخلی ماژول \lr {DATA\_MEM}}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces ماژول \lr {CU}}}{9}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces طراحی داخلی ماژول \lr {CU}}}{10}{figure.13}%
+\contentsline {figure}{\numberline {14}{\ignorespaces وضعیت مدار پس از اجرای کامل برنامه‌ی \lr {fibo\_machine.bin}}}{11}{figure.14}%
